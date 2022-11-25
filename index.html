@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .left-pane {
+            width: 20%;
+            
+        }
+
+        .right-pane {
+            width: 20%;
+            margin-left: 10px;
+        }
+
+        .middle-pane {
+            width: 60%;
+        }
+
+        .note {
+            font-family: monospace;
+            font-size: 16px;
+            font-weight: 100;
+            border-left: 5px solid tomato;
+            padding: 10px;
+            border-radius: 10px;
+            line-height: 25px;
+            font-size: 15px;
+        }
+
+        p {
+            line-height: 25px;
+            font-size: 16px;
+        }
+
+        li {
+            line-height: 25px;
+        }
+
+        a {
+            color: orange;
+        }
+
+        .link-container {
+            margin-bottom: 10px;
+        }
+
+        .special-link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .special-bulleted-list {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .special-numbered-list {
+            margin-left: -20px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .inline {
+            height: 30px;
+        }
+
+        .large {
+            width: 600px;
+            border: 1px solid black;
+        }
+
+        .indented-bullet {
+            list-style-type: none;
+            margin-left: -15px;
+        }
+
+        .indented-number {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        @media only screen and (max-width:500px) {
+            .left-pane, .right-pane {
+                display: none;
+            }
+
+            .middle-pane {
+                width: 500px;
+            }
+
+            .large {
+                width: 500px;
+                border: 1px solid black;
+            }
+
+            .indented-bullet {
+                list-style-type: none;
+                margin-left: -60px;
+                color:red; 
+            }
+
+            .indented-number{
+                margin-left:-70px;
+            }
+
+            .image_resize{
+                margin-left:-60px;
+            }
+
+            .image_resizee {
+                margin-left: -100px;
+            }
+
+            .aaa{
+                margin-left:-100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="left-pane">
+            <p><a href="#customer" class="special-link">Customer Journeys</a></p>
+            <p><a class="special-link" href="#using">Using Pre-Defined Chatbots</a></p>
+
+            <p><a href="#why" class="special-link">Why I Did What I Did</a></p>
+            <p><a href="#demos" class="special-link">Video Demos</a></p>
+
+        </div>
+
+        <div class="middle-pane">
+            <h2 style="font-weight:100;" id="customer"><b>Customer Journeys</b></h2>
+            <div class="link-container">
+                <a href="#one">
+                    What Are Customer Journeys?
+                </a>
+            </div>
+            <div class="link-container">
+                <a href="#two">
+                    Enabling Pre-Defined Customer Journeys and Using Them
+                </a>
+            </div>
+            <div class="link-container">
+                <a href="#three">
+                    Configuring Customer Journeys From Scratch
+                </a>
+            </div>
+            <div class="link-container">
+                <a href="#four">
+                    Costumer Journey Related Actions (Cloning, Deleting <only possible in drafting stage>, Scheduling, Archiving, Stopping)
+                </a>
+            </div>
+
+            <br /><br />
+
+            <h3 style="font-weight:100;" id="one"><b>What Are Customer Journeys?</b></h3>
+            <p>
+                Customer journeys refer to the journey or path customers take while visiting your websites or web apps. This usually involves customer activities like adding items to a wishlist, making a purchase, initiating a support query, etc.,
+
+            </p>
+            <p>
+                FreshChat presents you with a pre-defined set of such customer journeys using which you can monitor your customers and  perform activities like:
+            </p>
+
+            <ul>
+                <li>Sending automated replies </li>
+                <li>Sending order confirmation messages</li>
+                <li>Sending shipping updates and</li>
+                <li>Even trigger a campaign on your website </li>
+            </ul>
+
+            <p>
+                By clicking <img src="images/customer-journey-icon.jpg" class="inline" /> icon in the <b>left navbar</b>, you can access the <b>customer journeys</b> page.
+
+            </p>
+
+
+            <img src="images/customer-journey-page.png" class="large" />
+
+            <ul>
+                <li class="special-bulleted-list">
+                    In the left pane, <b>pre-defined customer journeys</b> are grouped together under various categories like <b>Track Orders, After-sales support, Grow your audience, Recommended for you,</b> etc.,
+                </li>
+                <li class="special-bulleted-list">
+                    In the right pane, customer journeys belonging to the <b>selected category</b> get listed. You can enable a customer journey by clicking <b>Enable Journey</b> icon. Read <a href="#two">how to enable (and configure) a pre-defined customer journey</a> to know more.
+
+                </li>
+                <li class="special-bulleted-list">
+                    You also have the <b>'Create from Scratch'</b> button in the right pane, using which you can configure a customer journey from scratch to suit your requirements. Read <a href="#">creating customer journeys from scratch</a> to know more.
+
+                </li>
+            </ul>
+
+
+
+
+            <br /><br />
+
+            <h3 style="font-weight:100;" id="two"><b>Enabling Pre-Defined Customer Journeys and Using Them</b></h3>
+            <p>
+                To understand customer journeys well, let's enable the 'Trigger a bot campaign on your website' customer journey and configure it such that:
+            </p>
+
+            <ul>
+                <li>It gets the visitors' email addresses and turns them into CRM contacts.</li>
+                <li>Then nudges them with a proactive message to take some action, like getting in touch with your support. </li>
+            </ul>
+
+            <ol>
+                <li class="special-numbered-list">Navigate to the <b>'Trigger a bot campaign on your website customer journey'</b> card. </li>
+                <li class="special-numbered-list">Click the <b>'Enable Journey'</b> button. The customer journey configuration page opens up.</li>
+                <img class="large" src="images/customer-journey-conf-1.png" style="margin-top:10px;margin-bottom:10px;" />
+                <div class="note" style="margin-bottom:10px;">
+                    <b>Note:</b> It is recommended you build your first customer journey with the basic flow available. Later you can turn it into a full-blown campaign (using triggers, actions, controls, etc., that are available in the left pane) once you understand customer journeys well.
+                </div>
+                <li class="special-numbered-list">
+                    The customer journey template has 3 steps: i) Selecting a segment of customers as the campaign's target, ii) Configuring the proactive message to be sent to the customers, and iii) Starting/Launching the Customer Journey.
+                </li>
+                <ul>
+                    <li class="indented-bullet" style="margin-bottom:10px;"><b>I. Selecting a segment of customers as the campaign's target</b> </li>
+                    <ol>
+                        <li class="indented-number">Click the <b>'Choose your segment'</b> link. This opens up a pop-up box. </li>
+                        <img src="images/segment-dialog.jpg" style="width:400px;" class="image_resize"/>
+                        <li class="indented-number">Select the <b>Contact Segment</b> you wish to be the campaign's target. (Read Contact Segments to know more about how Contact Segments can be created).</li>
+                        <li class="indented-number">
+                            You have the option of including contacts already existing in the segment chosen to be part of the campaign. You can also choose to exclude them and include only the incoming contacts as a part of the campaign.
+                        </li>
+                        <li class="indented-number">Click <b>Save</b> to add the selected Contact Segment.</li>
+
+                    </ol>
+
+                </ul>
+                <br />
+                <br />
+                <ul>
+                    <li class="indented-bullet" style="margin-bottom:10px;"><b>II. Configuring the proactive message to be sent to the customers</b> </li>
+                    <ol>
+                        <li class="indented-number">Click the Select bot or chat campaign' link. This opens up the select campaign pane. </li>
+                        <img src="images/campaign-settings-1.png" style="width:400px;border:1px solid black;" class="image_resize"/>
+                        <li class="indented-number">Click Create New --> Select Chat Campaign. This opens up the campaign details page. (You can try out the Bot campaign on your own later).</li>
+                        <img src="images/campaign-settings-2.png" style="width:500px;height:300px;border:1px solid black;" class="image_resize" />
+                        <ul style="margin-bottom:5px;margin-top:5px;">
+                            <li class="aaa">Give a name for the campaign like 'Visitors on the pricing page > 10 Seconds'.</li>
+                            <li class="aaa">Select a support member who will be involved in the campaign. By default, it will be assigned to you. But you can assign it to someone else too.</li>
+                            <li class="aaa">Configure a proactive message for your visitors like 'Do you need assistance. Contact our support @ 9090121212.' You can preview the message on the right pane. (You also have the option of adding multiple messages by clicking on the 'Add Message' button).</li>
+                            <li class="aaa">Click the 'Next:Configure -->' link to move to the next page.</li>
+                        </ul>
+                        <li class="indented-number">
+                            You will be led to the campaign configuration page.
+                        </li>
+                        <img src="images/campaign-settings-3.png" style="width:500px;height:300px;border:1px solid black;" id="largeImage" class="image_resize" />
+
+
+
+
+                        <ul style="margin-bottom:5px;margin-top:5px;">
+                            <li class="aaa">Select the Topic the campaign is going to be associated with. (Read Topics to know more).</li>
+                            <li class="aaa">You also have the option of limiting the number of times the configured message is going to be displayed. To do this, check the 'Limit the number of times this message is displayed to the user' checkbox and enter the maximum number of times the message can be displayed to the user. You can configure this limitation per session or across all sessions.</li>
+                            <img src="images/limit.jpg" height="100" style="border:1px solid black;" class="image_resizee"/>
+                            <li class="aaa">Preview the message one last time on the right pane to check everything is ok.</li>
+                            <li class="aaa">Click the 'Next:Launch -->' link to move to the next page.</li>
+                        </ul>
+
+
+                    </ol>
+
+                </ul>
+                <br />
+                <br />
+                <ul>
+                    <li class="indented-bullet" style="margin-bottom:10px;"><b>III. Launching the Customer Journey</b> </li>
+                    <ol>
+                        <li class="indented-number">Click the 'Launch' button to launch the campaign. </li>
+
+                        <li class="indented-number">You will be taken back to the Customer Journey configuration page. This is because you just configured a customer journey, but are yet to launch or kick off the journey.</li>
+                        <li class="indented-number">To launch your Customer Journey, click the Start Journey button at the top right corner.</li>
+                        <img src="images/start-journey-button.png" class="large image_resizee" />
+
+
+                        <li class="indented-number">
+                            The Customer Journey will be launched successfully.
+                        </li>
+                        <br />
+                        <div class="note image_resizee">
+                            <b>Note:</b> You will also have the option of scheduling Customer Journeys and running them at a later date and time. Also, remember that you should have configured the FreshChat welcome chatbot somewhere in your website or web app to receive the visitor's email id so that it can be added as a part of the campaign.'
+                        </div>
+
+                    </ol>
+
+
+
+                </ul>
+            </ol>
+            <p>You can also what how to configure <u>Customer Journeys</u> video demo to understand it better. </p>
+            <br /><br />
+
+
+
+
+
+
+
+
+            <br /><br />
+
+            <h3 style="font-weight:100;" id="three"><b>Configuring Customer Journeys From Scratch</b></h3>
+            <p>With Advanced Automations you can create four types of workflows,</p>
+
+            <ol>
+                <li>Auto Response - You can automate chat responses</li>
+                <li>Auto Resolve - You can auto-resolve conversations</li>
+                <li>Auto Assignment - You can automate conversation assignment  to a specific agent or group</li>
+                <li>Auto Escalation - You can auto-escalate a conversation to a specific agent or a group </li>
+            </ol>
+
+            <p>
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Advanced Automations is available as an app in the Freshchat Appstore (Marketplace). Click here to get the app.
+            </p>
+
+
+            <div class="note">
+                <b>Note:</b> Freshdesk Support Desk is available as an integration out of the box in the Advanced Automations app. However, you can still use the same app to integrate with other Freshworks products (or other products too) by using custom placeholders to store your domain and tokens.
+            </div>
+
+            <br /><br />
+
+            <h3 style="font-weight:100;" id="four"><b>Customer Journey Related Actions</b></h3>
+            <p>With Advanced Automations you can create four types of workflows,</p>
+
+            <ol>
+                <li>Auto Response - You can automate chat responses</li>
+                <li>Auto Resolve - You can auto-resolve conversations</li>
+                <li>Auto Assignment - You can automate conversation assignment  to a specific agent or group</li>
+                <li>Auto Escalation - You can auto-escalate a conversation to a specific agent or a group </li>
+            </ol>
+
+            <p>
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Advanced Automations is available as an app in the Freshchat Appstore (Marketplace). Click here to get the app.
+            </p>
+
+
+            <div class="note">
+                <b>Note:</b> Freshdesk Support Desk is available as an integration out of the box in the Advanced Automations app. However, you can still use the same app to integrate with other Freshworks products (or other products too) by using custom placeholders to store your domain and tokens.
+            </div>
+            <br /><br />
+
+            <h2 id="using">Using Pre-Defined Chatbots</h2>
+            <h3 style="font-weight:100;" id="one"><b>What Are Customer Journeys? (with screen explanation)</b></h3>
+            <p>
+                Customer journeys refers to the journey or path customers take while visiting your websites or web apps. This usually involves customer activities like adding items to wishlist, making a purchase, initiating a support query etc.,
+            </p>
+
+            <ol>
+                <li>Auto Response - You can automate chat responses</li>
+                <li>Auto Resolve - You can auto-resolve conversations</li>
+                <li>Auto Assignment - You can automate conversation assignment  to a specific agent or group</li>
+                <li>Auto Escalation - You can auto-escalate a conversation to a specific agent or a group </li>
+            </ol>
+
+            <p>
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Advanced Automations is available as an app in the Freshchat Appstore (Marketplace). Click here to get the app.
+            </p>
+
+
+            <div class="note">
+                <b>Note:</b> Freshdesk Support Desk is available as an integration out of the box in the Advanced Automations app. However, you can still use the same app to integrate with other Freshworks products (or other products too) by using custom placeholders to store your domain and tokens.
+            </div>
+
+            <br /><br />
+
+
+
+            <h2 id="why">Why I Did What I Did</h2>
+            <h3 style="font-weight:100;" id="one"><b>What Are Customer Journeys? (with screen explanation)</b></h3>
+            <p>With Advanced Automations you can create four types of workflows,</p>
+
+            <ol>
+                <li>Auto Response - You can automate chat responses</li>
+                <li>Auto Resolve - You can auto-resolve conversations</li>
+                <li>Auto Assignment - You can automate conversation assignment  to a specific agent or group</li>
+                <li>Auto Escalation - You can auto-escalate a conversation to a specific agent or a group </li>
+            </ol>
+
+            <p>
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Automate your daily chat workflows, save time for your Agents, and help them focus on tasks that matter, with Advanced Automations.
+                Advanced Automations is available as an app in the Freshchat Appstore (Marketplace). Click here to get the app.
+            </p>
+
+
+            <div class="note">
+                <b>Note:</b> Freshdesk Support Desk is available as an integration out of the box in the Advanced Automations app. However, you can still use the same app to integrate with other Freshworks products (or other products too) by using custom placeholders to store your domain and tokens.
+            </div>
+
+            <br /><br />
+
+
+
+            <h2 id="demos">Video Demos</h2>
+
+
+        </div>
+
+            <div class="right-pane">
+                <p><b>Related Articles</b></p>
+                <p>Dummy Article</p>
+                <p>Dummy Article</p>
+                <p>Dummy Article</p>
+                <p>Dummy Article</p>
+            </div>
+        </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
